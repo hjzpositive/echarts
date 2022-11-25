@@ -9,7 +9,7 @@ function setRem() {
     clientWidth = clientWidth < 1024 ? 1024 : clientWidth;
 
     //我的电脑  屏幕尺寸 1440  为了让每一个rem等于80px  /18
-    var rem = clientWidth / 18;
+    var rem = clientWidth / 24;
 
     var html = document.getElementsByTagName('html')[0];
     html.style.fontSize = rem + 'px';

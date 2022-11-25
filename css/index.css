@@ -2,3 +2,607 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: 2000px 1000px;
+}
+
+h4,
+h3,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.overall {
+  min-width: 1024px;
+  max-width: 1920px;
+  min-height: 10rem;
+  margin: 0 auto;
+  padding: 1rem 0.25rem 0;
+  box-sizing: border-box;
+  background: url(../images/logo.png) no-repeat;
+  background-size: contain;
+  display: flex;
+}
+
+/* .column {
+  height: 22rem;
+  margin-top: 0.4rem;
+} */
+
+
+.overall>.column {
+  flex: 3;
+  width: 30%;
+  /* background-color: rgb(248, 187, 187); */
+}
+
+.overall>.column:nth-of-type(2) {
+  flex: 4;
+  width: 40%;
+  /* background-color: skyblue; */
+  margin: 1.375rem 0.1875rem 0;
+}
+
+.inner>ul {
+  font-size: 0.5rem;
+  display: flex;
+}
+
+/* 概览区域 */
+.overview {
+  /* height: 2.3rem; */
+  box-sizing: border-box;
+}
+
+.overview ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview h4 {
+  font-size: 0.4rem;
+  color: white;
+  margin: 0 0 0.06rem 0rem;
+}
+
+.overview ul li {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.overview ul li span {
+  font-size: 0.2rem;
+  color: #4c9bfd;
+}
+
+.line {
+  display: inline-block;
+  border-radius: 5px;
+  width: 4px;
+  height: 10px;
+  margin-right: 2px;
+}
+
+/* 监控 */
+.control {
+  height: 5.5rem;
+}
+
+.control>.inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.control .tabs {
+  font-size: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.tabs a {
+  color: #1950c4;
+}
+
+.tabs .active {
+  color: white;
+}
+
+.control .line1 {
+  display: inline-block;
+  /* border-radius: 5px; */
+  width: 3px;
+  height: 28px;
+  margin-left: .4rem;
+  margin-right: .4rem;
+  background-color: #4c9bfd;
+}
+
+.content {
+  height: 4.8rem;
+  /* background-color: rgb(151, 121, 121); */
+  margin-top: 0.125rem;
+  box-sizing: border-box;
+  /* flex: 1; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.monitoring .content>.top {
+  height: 0.4375rem;
+  color: #68d8fe;
+  line-height: 0.4375rem;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  font-size: 0.15rem;
+}
+
+.top {
+  background-color: #194fc46d;
+}
+
+.content .row {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 0.2rem;
+  line-height: 0.5rem;
+  color: #61a8ff;
+  /* background-color: #194fc49b; */
+}
+
+.content .col:nth-of-type(1) {
+  width: 1.5rem;
+}
+
+.content .col:nth-of-type(2) {
+  width: 3.2rem;
+  /* background-color: red; */
+}
+
+.content .col:nth-of-type(3) {
+  width: 1rem;
+}
+
+/* 滚动动画 */
+.message {
+  flex: 1;
+  overflow: hidden;
+}
+
+.message>.messageScrool {
+  animation: rollPlay linear 8s infinite;
+}
+
+@keyframes rollPlay {
+  0% {}
+
+  100% {
+    transform: translateY(-30%);
+  }
+}
+
+
+/* 点位模块 */
+.point {
+  height: 3rem;
+}
+
+.point .chart {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: aqua; */
+}
+
+.point .pie {
+  width: 4rem;
+  height: 2.5rem;
+  /* background-color: rgb(201, 119, 119); */
+}
+
+.point .data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.5rem;
+  padding: .5rem .4rem;
+  box-sizing: border-box;
+  background-image: url(../images/rect.png);
+  background-size: cover;
+}
+
+.point h3 {
+  font-size: .3rem;
+  color: white;
+  margin-bottom: .15rem;
+}
+
+.point h4 {
+  font-size: 0.25rem;
+  color: #fff;
+}
+
+.point span {
+  display: block;
+  color: #f8ab05;
+  font-size: 0.175rem;
+}
+
+/* 地图  */
+.map {
+  height: 7rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.map h3 {
+  line-height: 1;
+  padding: 0.2rem 0;
+  margin: 0;
+  font-size: 0.2rem;
+  color: #fff;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.map .iconCube {
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.25rem;
+  margin-right: 0.0625rem;
+  background-color: #fff;
+  background: url(../images/shebei.png) no-repeat;
+  background-size: contain;
+}
+
+.map .chart {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.map .geo {
+  width: 100%;
+  height: 100%;
+}
+
+/* 用户模块 */
+
+.users {
+  height: 3.05rem;
+  display: flex;
+  /* margin-top: .03rem; */
+}
+
+.users .chart {
+  display: flex;
+  margin-top: 0.125rem;
+  padding-bottom: .3rem;
+}
+
+.users .bar {
+  width: 6.35rem;
+  height: 2.4rem;
+  /* background-color: rgb(211, 133, 133); */
+}
+
+.users .data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.1rem;
+  padding: 0.45rem 0.3rem;
+  box-sizing: border-box;
+  background-image: url(../images/rect.png);
+  background-size: cover;
+}
+
+.users h3 {
+  font-size: .3rem;
+  color: white;
+  /* margin-bottom: .15rem; */
+}
+
+.users h4 {
+  /* margin-bottom: 0.15rem; */
+  font-size: 0.25rem;
+  color: #fff;
+}
+
+.users span {
+  display: block;
+  color: #4cfde2;
+  font-size: 0.175rem;
+}
+
+/* 订单 */
+.indent {
+  height: 1.2rem;
+}
+
+.indent .filter {
+  display: flex;
+}
+
+.indent .filter a {
+  display: block;
+  height: 0.28rem;
+  line-height: 1;
+  padding: 0 0.4rem;
+  color: #1950c4;
+  font-size: 0.28rem;
+  border-right: 0.028rem solid #00f2f1;
+}
+
+.indent .filter a:first-child {
+  padding-left: 0;
+}
+
+.indent .filter a:last-child {
+  border-right: none;
+}
+
+.indent .filter a.active {
+  color: #fff;
+  font-size: 0.3rem;
+}
+
+.indent .data {
+  display: flex;
+  margin-top: 0.25rem;
+}
+
+.orderDataHidden {
+  display: none !important;
+}
+
+.indent .item {
+  width: 50%;
+}
+
+.indent h4 {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 0.125rem;
+}
+
+.indent span {
+  display: block;
+  color: #4c9bfd;
+  font-size: 0.2rem;
+}
+
+/* 销售 */
+.sell {
+  height: 2.6rem;
+}
+
+.sell .caption {
+  display: flex;
+  line-height: 1;
+}
+
+.sell h3 {
+  height: 0.3rem;
+  margin-top: 0.06rem;
+  padding-right: 0.3rem;
+  border-right: 0.025rem solid #00f2f1;
+}
+
+.sell a {
+  padding: 0.1rem 0.1rem;
+  font-size: 0.3rem;
+  margin: -0.0375rem 0 0 0.3rem;
+  border-radius: 0.0375rem;
+  color: #0bace6;
+}
+
+.sell a.active {
+  background-color: #4c9bfd;
+  color: #fff;
+}
+
+.sell .inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.sell .chart {
+  /* background-color: pink; */
+  flex: 1;
+  height: 2rem;
+  padding-top: 0.125rem;
+  position: relative;
+}
+
+.sell .label {
+  position: absolute;
+  left: 0.525rem;
+  top: 0.07rem;
+  color: #4996f5;
+  font-size: 0.175rem;
+}
+
+.sell .sline {
+  width: 100%;
+  height: 2.2rem;
+  /* background-color: rgb(240, 172, 172); */
+}
+
+.sell h3 {
+  font-size: .3rem;
+  color: white;
+  margin-bottom: .15rem;
+}
+
+
+/*渠道 分布  */
+.found {
+  display: flex;
+}
+
+.found h3 {
+  font-size: .3rem;
+  color: white;
+  margin-bottom: .15rem;
+}
+
+.channel,
+.quarter {
+  flex: 1;
+  height: 2.3rem;
+}
+
+.channel {
+  margin-right: 0.15rem;
+}
+
+.channel .data {
+  overflow: hidden;
+}
+
+.channel .data .radar {
+  height: 2.1rem;
+  width: 100%;
+  /* background-color: pink; */
+}
+
+.channel h4 {
+  color: #fff;
+  font-size: 0.4rem;
+  margin-bottom: 0.0625rem;
+}
+
+.channel small {
+  font-size: 50%;
+}
+
+.channel span {
+  display: block;
+  color: #4c9bfd;
+  font-size: 0.175rem;
+}
+
+/* 季度区块 */
+.quarter .inner {
+  display: flex;
+  flex-direction: column;
+  margin: 0 -0.075rem;
+}
+
+.quarter .chart {
+  flex: 1;
+  /* padding-top: 0.225rem; */
+}
+
+.quarter .box {
+  position: relative;
+}
+
+.quarter .label {
+  transform: translate(-50%, -30%);
+  color: #fff;
+  font-size: 0.6rem;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+}
+
+.quarter .label small {
+  font-size: 50%;
+}
+
+.quarter .gauge {
+  height: 1.1rem;
+}
+
+.quarter .data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quarter .item {
+  margin-left: .3rem;
+  width: 50%;
+}
+
+.quarter h4 {
+  color: #fff;
+  font-size: 0.3rem;
+  margin-bottom: 0.1rem;
+}
+
+.quarter span {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #4cfde2;
+  font-size: 0.175rem;
+}
+
+/* 完成进度 */
+.rank {
+  height: 2.22rem;
+}
+
+.rank h3 {
+  font-size: .3rem;
+  color: white;
+  margin-bottom: .1rem;
+}
+
+/* 点位分布下面整体 */
+.rank .chart {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: rgb(250, 212, 212); */
+  margin-top: 0.125rem;
+}
+
+.rank .water {
+  width: 3.9rem;
+  height: 2rem;
+  /* background-color: rgb(92, 6, 6); */
+  margin-right: 0.125rem;
+  margin-top: -0.1rem;
+}
+
+.rank .data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.9rem;
+  height: 2.2rem;
+  padding: 0.2rem 0.3rem;
+  box-sizing: border-box;
+  background-image: url(../images/rect.png);
+  background-size: cover;
+  margin-top: -0.4rem;
+  margin-right: 0.5rem;
+}
+
+.rank h4 {
+  font-size: 0.25rem;
+  color: #fff;
+}
+
+.rank span {
+  display: block;
+  color: #f8ab05;
+  font-size: 0.175rem;
+}
